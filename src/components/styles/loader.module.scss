@@ -1,0 +1,23 @@
+.loader{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    rotate: -8deg;
+    font-family: "Comic Sans MS", sans-serif;
+    // margin-top: 30px;
+
+    &__imgContainer{
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+    }
+    &__img{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+   
+}
