@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Japanese 3017";
   src: url('./assets/Japanese_3017.ttf') format('truetype');
   font-weight: 400;
@@ -12,56 +12,20 @@
   font-weight: 500;
   font-display: swap;
   font-style: normal;
-}
+} */
 body{
-  background-image: url(assets/Main.png);
-  background-repeat: no-repeat;
-  background-size:cover;
   background-color: black;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  min-height: 700px;
 
+
+#root{
   color: white;
-  font-family: 'Japanese 3017';     
-  background-image: url(assets/klyaksa.png);
-  background-position-y: bottom;
-  background-position-x: center;
-  background-size:auto;
-  background-attachment:scroll;
-  background-repeat: no-repeat;
-  
 }
 
-.number-popup {
-  position: absolute;
-  background-image: url(assets/plusCoin.png);
-  width: 142.24px;
-  height: 172.33px;
-  font-family: 'Japanese 3017';
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 41.41px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+a{
+  text-decoration: none;
+  color: aliceblue;
 
-
-
-  color: #fff;
   
-  opacity: 1;
-  animation: fadeOut 1s forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }

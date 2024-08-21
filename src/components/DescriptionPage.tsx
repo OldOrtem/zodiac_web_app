@@ -21,6 +21,7 @@ const DescriptionPage = () => {
 
     return (
       <div className={styles.des}>
+        
         {description}
       </div>
     );
