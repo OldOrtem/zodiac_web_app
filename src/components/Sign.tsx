@@ -1,5 +1,5 @@
 import styles from "./styles/sign.module.scss"
-import ariesImage from '../../assets/images/Aries.png';
+// import ariesImage from '../../assets/images/Aries.png';
 
 interface SignProps{
     signName: string;
