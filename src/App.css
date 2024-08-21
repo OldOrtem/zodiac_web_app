@@ -21,7 +21,7 @@ body{
 
 #root{
   color: white;
-
+  font-family: "Absurdite";
   
 }
 
@@ -29,5 +29,11 @@ a{
   text-decoration: none;
   color: aliceblue;
 
+  
+}
+
+@font-face {
+  font-family: "Absurdite";
+  src: url('./assets/Absurdite.otf') format('opentype');
   
 }

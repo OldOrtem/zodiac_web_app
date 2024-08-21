@@ -1,5 +1,5 @@
 {
-  "about": "О программе",
+  "about": "ВАШ ГОРОСКОП",
   "signs": [
     { "name": "Овен", "englishName": "Aries", "dateRange": "21 мар 19 апр" },
     { "name": "Телец", "englishName": "Taurus", "dateRange": "20 апр 20 мая" },

@@ -1,6 +1,13 @@
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+
     width: 100%;
+    .title{
+        margin: 7vw 0 7vw 7vw;
+    }
+    font-size: 7vw;
+    
 }
