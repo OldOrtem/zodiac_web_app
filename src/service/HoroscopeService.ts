@@ -21,7 +21,7 @@ class HoroscopeService implements IService{
     }
     
     public async loadHoroscope(sign:string, language:string):Promise<string>{
-        const response: string = await this.transport.post(sign, language === "ru" ? "original": "translated");
+        const response: string = await this.transport.post(sign.toLowerCase(), language === "ru" ? "original": "translated");
     
         return response;
     }

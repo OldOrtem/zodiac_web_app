@@ -11,7 +11,7 @@ const Signs = observer(() => {
     <div className={styles.signs}>
       {
         langStore.dictionary[currentLang].signs.map((sign, index) => (
-          <Link  to={`/${sign.name}`} key={index} >
+          <Link  to={`/${sign.englishName}`} key={index} >
             <Sign
 
               key={index} 
