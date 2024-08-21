@@ -4,36 +4,41 @@ import HoroscopeService from "../service/HoroscopeService";
 import langStore from "../store/langStore";
 import styles from "./styles/description.module.scss"
 import Loader from "./Loader";
-import useFetching from "../hooks/useFetching";
+import { observer } from "mobx-react-lite";
+import { initBackButton } from '@telegram-apps/sdk';
 
-const DescriptionPage = () => {
+const DescriptionPage = observer(() => {
     const {name} = useParams();
     const [description, setDescription] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
 
-    const [fetching, isLoading, error] = useFetching(
-        fetchingDes
-      );
-    
+    const [backButton] = initBackButton();
     
     useEffect(()=>{
-        if(error){
-            console.log(error)
-        }
+        backButton.show();
         fetching()
-    },[description, error, fetching, name])
+        async function fetching():Promise<void>{
+            setIsLoading(true)
+            setDescription("");
+            const des:string = await HoroscopeService.loadHoroscope(name as string, langStore.lang);
+            setDescription(des);
+            setIsLoading(false)
+        }
+        return(()=>{
+                backButton.hide();
+            })
+    },[langStore.lang])
 
-    async function fetchingDes():Promise<void>{
-        const des:string = await HoroscopeService.loadHoroscope(name as string, langStore.lang);
-        setDescription(des);
-    }
+    
 
 
     return (
       <div className={styles.des}>
-        {(isLoading && <Loader />) || description}
+        {description}
+        {(isLoading && <Loader />)}
       </div>
     );
-  };
+  });
   
   export default DescriptionPage;
   

@@ -1,5 +1,6 @@
 
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
 
 const MainPage = () => {
 //     const initData = useInitData();
@@ -16,6 +17,7 @@ const MainPage = () => {
   
     return (
       <main>
+        <Header/>
         <Outlet/>
       </main>
     );
