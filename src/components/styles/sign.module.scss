@@ -1,0 +1,27 @@
+.sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vw;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    
+    background-color: rgba(9, 7, 54, 0.847);
+    border-radius: 35px;
+
+    img{
+        width: 40%;
+    }
+    &__name{
+        font-size: 6vw;
+    }
+
+    &__dates{
+        font-size: 4.5vw;
+    }
+    
+
+}
