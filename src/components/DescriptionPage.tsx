@@ -18,7 +18,7 @@ const DescriptionPage = observer(() => {
     useEffect(()=>{
         backButton.show();
         backButton.on('click', () => {
-            navigate(-1);
+            navigate('/');;
           });
         
         fetching()
