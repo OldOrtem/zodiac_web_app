@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
-import Signs from "./Signs";
-
+import { useEffect } from "react";
+import { Outlet } from 'react-router-dom';
 import { useInitData } from "@telegram-apps/sdk-react";
+import langStore from "../store/langStore";
 
 const MainPage = () => {
-    const [language, setLanguage] = useState<string>('en'); // Default to 'en'
     const initData = useInitData();
 
   useEffect(() => {
-    // Получение языка из TelegramWebApp API
     const getLanguage = () => {
       const lang = initData?.user?.languageCode as string;
-      setLanguage(lang === 'ru' ? 'e' : 'en'); // Вы можете добавить другие языки здесь
+      langStore.setLang(lang === 'ru' ? 'ru' : 'en')
     };
 
     getLanguage();
@@ -20,8 +18,7 @@ const MainPage = () => {
   
     return (
       <main>
-        {language}
-        <Signs/>
+        <Outlet/>
       </main>
     );
   };

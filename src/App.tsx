@@ -1,7 +1,8 @@
 
 import { SDKProvider} from '@telegram-apps/sdk-react';
 import './App.css'
-import MainPage from './components/MainPage';
+import { RouterProvider } from 'react-router-dom';
+import router from './providers/router';
 
 
 const App: React.FC = () => {
@@ -9,8 +10,7 @@ const App: React.FC = () => {
   
   return (
     <SDKProvider acceptCustomStyles >
-      
-      <MainPage/>
+      <RouterProvider router={router}/>
     </SDKProvider>
   );
 };
