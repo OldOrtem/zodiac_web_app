@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import HoroscopeService from "../service/HoroscopeService";
 import langStore from "../store/langStore";
 import styles from "./styles/description.module.scss"
@@ -11,11 +11,16 @@ const DescriptionPage = observer(() => {
     const {name} = useParams();
     const [description, setDescription] = useState("");
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     const [backButton] = initBackButton();
     
     useEffect(()=>{
         backButton.show();
+        backButton.on('click', () => {
+            navigate(-1);
+          });
+        
         fetching()
         async function fetching():Promise<void>{
             setIsLoading(true)
