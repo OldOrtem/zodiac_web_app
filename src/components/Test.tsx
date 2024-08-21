@@ -1,5 +1,5 @@
 import { useLayoutEffect} from "react";
-import statsService from "../service/HoroscopeService";
+// import statsService from "../service/HoroscopeService";
 import { observer } from "mobx-react-lite";
 
 
