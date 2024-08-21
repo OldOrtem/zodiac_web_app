@@ -11,7 +11,7 @@ const MainPage = () => {
     // Получение языка из TelegramWebApp API
     const getLanguage = () => {
       const lang = initData?.user?.languageCode as string;
-      setLanguage(lang); // Вы можете добавить другие языки здесь
+      setLanguage(lang === 'ru' ? 'e' : 'en'); // Вы можете добавить другие языки здесь
     };
 
     getLanguage();
