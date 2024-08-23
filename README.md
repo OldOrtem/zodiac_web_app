@@ -11,6 +11,6 @@
 
 
 Demo:
-![alt text](https://github.com/OldOrtem/zodiac_web_app/blob/main/demo1.png?raw=true)
+![alt text](https://github.com/OldOrtem/zodiac_web_app/blob/main/demo1.jpg?raw=true)
 
-![alt text](https://github.com/OldOrtem/zodiac_web_app/blob/main/demo2.png?raw=true)
+![alt text](https://github.com/OldOrtem/zodiac_web_app/blob/main/demo2.jpg?raw=true)
