@@ -3,16 +3,16 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 
 const MainPage = () => {
-//     const initData = useInitData();
+    const initData = useInitData();
 
-//   useEffect(() => {
-//     const getLanguage = () => {
-//       const lang = initData?.user?.languageCode as string;
-//       langStore.setLang(lang === 'ru' ? 'ru' : 'en')
-//     };
+  useEffect(() => {
+    const getLanguage = () => {
+      const lang = initData?.user?.languageCode as string;
+      langStore.setLang(lang === 'ru' ? 'ru' : 'en')
+    };
 
-//     getLanguage();
-//   }, []);
+    getLanguage();
+  }, []);
 
   
     return (
